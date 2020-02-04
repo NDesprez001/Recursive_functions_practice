@@ -56,4 +56,24 @@ def find_lst_dict   (a):
 # print(find_lst(n))
 # print(find_dict(d))
 
-print(find_lst_dict(d))
+# print(find_lst_dict(d))
+
+## RECURSIVE
+
+n = [4, 5, 6, 7, 8, 'kjlsdhgfisaacklgjsheu', 'ld', 'sd;', 'akjfhisaacdslkajfh', ['isaac'], {'sdf':'kkisaacd','dlk':432,'324':'dslkisaacl','dflkj':2343}]
+d = {'sdf':'kkisaacd','dlk':432,'324':'dslkisaacl','dflkj':2343}
+str_to_find = 'isaac'
+
+def rec(a):
+    if isinstance(a, str):
+        if str_to_find in a:
+            print(a)
+    if isinstance(a, list):
+        for i in a:
+            rec(i)
+    if isinstance(a, dict):
+        for value in a.values():
+            rec(value)
+
+
+rec(n)
