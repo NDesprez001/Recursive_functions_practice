@@ -35,21 +35,25 @@ n = [4, 5, 6, 7, 8, 'kjlsdhgfissacklgjsheu', 'ld', 'sd;']
 d = {'sdf':'kkisaacd','dlk':432,'324':'dslkisaacl','dflkj':2343}
 
 
-def find_lst(a):
+def find_lst_dict   (a):
     if isinstance(a, list):
         return recursive(a)
+    if isinstance(a, dict):
+        return find(a)
     else:
         return 'That is not a list'
  
 
-def find_dict(a):
-    if isinstance(a, dict):
-        return find(a)
-    else:
-        return 'That is not a dictionary'
+# def find_dict(a):
+#     if isinstance(a, dict):
+#         return find(a)
+#     else:
+#         return 'That is not a dictionary'
 
 
 
 
-print(find_lst(n))
-print(find_dict(d))
+# print(find_lst(n))
+# print(find_dict(d))
+
+print(find_lst_dict(d))
